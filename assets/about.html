@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ff9800; /* Orange Accent Color */
+        }
+
+        .about-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .about-card {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+            background-color: #fff; /* White Background for Cards */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-decoration: none; /* Remove underline for links */
+            color: inherit; /* Inherit text color from parent */
+        }
+
+        .about-card:hover {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add subtle shadow on hover */
+        }
+
+        .about-card i {
+            font-size: 48px;
+            color: #3498db;
+            margin-bottom: 10px; /* Added space between icon and title */
+            display: block; /* Ensures the margin-bottom applies correctly */
+        }
+
+        .about-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .about-text {
+            color: #555;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="about-container">
+    <a href="https://svvmaps.com/" class="about-card">
+        <i class="fas fa-globe"></i>
+        <div class="about-title">MAPS SEDONA/VERDE VALLEY</div>
+        <div class="about-text">Explore Sedona and Verde Valley with our detailed maps. Click to learn more.</div>
+    </a>
+
+    <a href="https://www.recreation.gov/sitepass/74387" class="about-card">
+        <i class="fas fa-shopping-cart"></i>
+        <div class="about-title">BUY PARKING PASS</div>
+        <div class="about-text">Purchase your parking pass online to secure your spot in Sedona's popular areas.</div>
+    </a>
+
+    <a href="http://sedonawebcam.com/" class="about-card">
+        <i class="fas fa-video"></i>
+        <div class="about-title">SEE SEDONA LIVE - WEBCAMS</div>
+        <div class="about-text">Experience Sedona in real-time with our live webcams. Check out the breathtaking views.</div>
+    </a>
+
+    <!-- New Card -->
+    <a href="https://visitsedona.com/" class="about-card">
+        <i class="fas fa-globe"></i>
+        <div class="about-title">VISIT SEDONA WEBSITE</div>
+        <div class="about-text">Explore more on the official Visit Sedona website. Click to visit.</div>
+    </a>
+</div>
+
+</body>
+</html>

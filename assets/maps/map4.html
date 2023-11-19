@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #map-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #loading-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        #loading-text {
+            color: white;
+            font-size: 24px;
+            margin-left: 10px;
+        }
+
+        #loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid white;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map-container">
+    <div id="loading-overlay">
+        <div id="loading-spinner"></div>
+        <p id="loading-text">Loading...</p>
+    </div>
+    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d843093.6067246316!2d-112.50825821632536!3d34.36741420349515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x872b626ae189fcfd%3A0x98737b56b52b6836!2sAnthem%2C%20Phoenix%2C%20AZ!3m2!1d33.8652315!2d-112.13573389999999!4m5!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C%20AZ!3m2!1d34.8697395!2d-111.7609896!5e0!3m2!1sen!2sus!4v1649656516601!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="true" loading="lazy"></iframe>
+</div>
+
+<script>
+    // Wait for the iframe to load
+    document.getElementById('map').onload = function () {
+        // Hide the loading overlay when the iframe is fully loaded
+        document.getElementById('loading-overlay').style.display = 'none';
+    };
+</script>
+
+</body>
+</html>
